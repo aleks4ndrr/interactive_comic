@@ -19,19 +19,33 @@ textarea {
   font: inherit;
 }
 
+/* || VARIABLES */
+
+/* locally imported font */
+@font-face {
+  font-family: AdamWarrenFont;
+  src: url("/assets/font/adam-warren-pro.regular.ttf") format("truetype");
+}
+
+:root {
+  /* colors */
+  --BG-COLOR: #333;
+
+  /* padding */
+  --PANEL-PADDING: 4rem;
+
+  /* font */
+  --HEADING-FS: 5rem;
+}
+
 html,
 body {
   font-size: 1.2rem;
-  font-family: serif;
+  font-family: AdamWarrenFont, sans-serif;
   font-weight: 400;
   font-style: normal;
   color: rgb(30, 25, 30);
   max-width: 100%;
-}
-
-/* || VARIABLES */
-:root {
-  --BG-COLOR: #333;
 }
 
 /* || GENERAL STYLES */
@@ -54,7 +68,7 @@ body {
 }
 
 .title__h1 {
-  font-size: 4rem;
+  font-size: var(--HEADING-FS);
 }
 
 .title__h4 {
@@ -90,4 +104,19 @@ body {
   margin-left: -25px;
   position: absolute;
   width: 50px;
+}
+
+/* || PANEL STYLING */
+
+.panel__odd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 4rem;
+  height: 200vh;
+}
+
+.panel__img-container {
+  position: sticky;
 }
