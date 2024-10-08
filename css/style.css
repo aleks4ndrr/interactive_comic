@@ -45,7 +45,7 @@ body {
   font-weight: 400;
   font-style: normal;
   color: rgb(30, 25, 30);
-  max-width: 100%;
+  width: 100%;
 }
 
 /* || GENERAL STYLES */
@@ -83,6 +83,10 @@ body {
   width: 200px;
 }
 
+.title__arrow-div:hover {
+  cursor: pointer;
+}
+
 @keyframes bouncing {
   0% {
     bottom: 0;
@@ -109,14 +113,51 @@ body {
 /* || PANEL STYLING */
 
 .panel__odd {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin: 4rem;
+  flex-direction: column; */
+  /* position: relative; */
+  /* top: 0; */
+  /* margin: 4rem; */
   height: 200vh;
+  width: 100%;
+  background-color: blue;
+}
+.panel__even {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+  /* position: relative; */
+  /* top: 0; */
+  /* margin: 4rem; */
+  height: 200vh;
+  width: 100%;
+  background-color: green;
 }
 
-.panel__img-container {
+.panel__container {
+  max-width: 100%;
+  height: 100vh;
   position: sticky;
+  top: 0;
+  background-color: orange;
+}
+
+.panel__img {
+  max-width: 80%;
+  /* display: none; */
+}
+
+.panel__textbox {
+  position: relative;
+  bottom: 3rem;
+  left: 3rem;
+  max-width: 400px;
+}
+
+.end__panel {
+  height: 400px;
+  background-color: blue;
 }
