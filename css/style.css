@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
 /* || RESET */
 *,
 *::after,
@@ -23,7 +25,7 @@ textarea {
 
 /* locally imported font */
 @font-face {
-  font-family: AdamWarrenFont;
+  font-family: AdamWarrenFont, "Bangers", sans-serif;
   src: url("/assets/font/adam-warren-pro.regular.ttf") format("truetype");
 }
 
