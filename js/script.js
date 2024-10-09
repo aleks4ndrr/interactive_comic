@@ -55,19 +55,21 @@ const firstPanel = document.getElementById("panel1");
 const handleIntersection = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      // Play sound when #first comes into view
+      // play sound when #first comes into view
       sound.play();
     }
   });
 };
 
-// Create the IntersectionObserver
+// create the IntersectionObserver
 const observer = new IntersectionObserver(handleIntersection, {
   threshold: 0.3,
 });
 
-// Start observing the "first" panel
+// start observing the first panel
 observer.observe(firstPanel);
+
+// open the ship animation (onclick)
 
 const shipClosed = document.querySelector(".panel2__ship");
 const shipOpen = document.querySelector(".panel2__ship_open");
@@ -76,3 +78,33 @@ shipClosed.addEventListener("click", () => {
   shipClosed.style.display = "none";
   shipOpen.style.display = "block";
 });
+
+// SOUND FOR SIXTH PANEL
+
+//  object for the sound
+const panel6Sound = new Audio("assets/sounds/panel6.mp3");
+panel6Sound.preload = "auto"; // preload the sound
+
+// reference to the 6th panel
+const panel6 = document.getElementById("panel6");
+
+//  handle the intersection
+const handlePanel6Intersection = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // play the sound when the 6th panel is in view
+      panel6Sound.play().catch((error) => {
+        // handle any errors (e.g., autoplay restrictions)
+        console.error("Error playing sound:", error);
+      });
+    }
+  });
+};
+
+// create the IntersectionObserver for the 6th panel
+const panel6Observer = new IntersectionObserver(handlePanel6Intersection, {
+  threshold: 0.5,
+});
+
+// start observing the 6th panel
+panel6Observer.observe(panel6);

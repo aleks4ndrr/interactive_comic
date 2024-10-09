@@ -142,6 +142,7 @@ body {
   /* display: none; */
   margin: auto;
   width: 90%;
+  height: 100vh;
 }
 
 /* PANEL 1 IMG STYLING */
@@ -225,10 +226,38 @@ body {
 .panel4__alien-sad {
   width: 650px;
   position: absolute;
-  top: 20px;
+  top: 0;
+  left: 20%;
+}
+.panel4__alien-surprised {
+  width: 650px;
+  position: absolute;
+  top: 0;
   left: 20%;
 }
 
+/* PANEL 5 */
+.panel__textbox5 {
+  padding: var(--TEXTBOX-PADDING);
+  font-size: var(--TEXTBOX-FS);
+  display: block;
+  background-color: var(--TEXTBOX-BG);
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+  border: solid 2px #333;
+  /* left: 3rem; */
+  max-width: 1200px;
+}
+
+/* PANEL 6 */
+
+.panel6__alien-happy {
+  position: absolute;
+  width: 700px;
+  bottom: -30px;
+  left: 30%;
+}
 .panel__textbox {
   padding: var(--TEXTBOX-PADDING);
   font-size: var(--TEXTBOX-FS);
