@@ -38,7 +38,7 @@ textarea {
 
   /* font */
   --HEADING-FS: 5rem;
-  --TEXTBOX-FS: 1.2rem;
+  --TEXTBOX-FS: 1.5rem;
 }
 
 html,
@@ -68,10 +68,12 @@ body {
 
 .title__h1 {
   font-size: var(--HEADING-FS);
+  color: antiquewhite;
 }
 
 .title__h4 {
   font-size: 0.8rem;
+  color: antiquewhite;
 }
 
 /* bobbing arrow */
@@ -120,10 +122,11 @@ body {
 /* .panel__even { */
 .panel {
   padding: 20px var(--PANEL-PADDING);
-  height: 300vh;
+  height: 200vh;
   width: 100%;
   /* background-color: green; */
   align-items: center;
+  margin: 100px 0;
 }
 
 .panel__container {
@@ -141,17 +144,90 @@ body {
   width: 90%;
 }
 
-.panel1__planet {
+/* PANEL 1 IMG STYLING */
+.panel1__meteor {
+  width: 300px;
+  rotate: 30deg;
   display: block;
-  z-index: 1;
+  z-index: 2;
   position: absolute;
-  left: 10px;
+  right: 100px;
   top: 20px;
-  scale: 70%;
-  /* max-width: 600px; */
 }
 
-/* PANEL 1 IMG STYLING */
+/* PANEL 2 IMG STYLING */
+.panel2__ship {
+  width: 800px;
+  z-index: 2;
+  position: absolute;
+  right: 20%;
+  bottom: -40px;
+}
+.panel2__ship:hover {
+  cursor: pointer;
+}
+
+.panel2__ship_open {
+  display: none;
+  width: 800px;
+  z-index: 2;
+  position: absolute;
+  right: 20%;
+  bottom: -40px;
+}
+
+/* PANEL 3 */
+.panel3__alien-ship {
+  position: absolute;
+  bottom: -30px;
+  width: 800px;
+  left: 80px;
+}
+.panel__textbox3 {
+  padding: var(--TEXTBOX-PADDING);
+  font-size: var(--TEXTBOX-FS);
+  display: block;
+  background-color: var(--TEXTBOX-BG);
+  position: absolute;
+  bottom: -10px;
+  right: 100px;
+  border: solid 2px #333;
+  /* left: 3rem; */
+  width: 600px;
+}
+
+.panel3__alien1 {
+  position: absolute;
+  top: -30px;
+  width: 400px;
+  left: 80px;
+}
+.panel3__alien2 {
+  position: absolute;
+  top: 80px;
+  width: 400px;
+  right: 80px;
+}
+
+.panel3__alien3 {
+  position: absolute;
+  right: 15%;
+  top: 15%;
+}
+.panel3__alien4 {
+  width: 200px;
+  position: absolute;
+  left: 35%;
+  top: 5%;
+}
+
+/* PANEL 4 */
+.panel4__alien-sad {
+  width: 650px;
+  position: absolute;
+  top: 20px;
+  left: 20%;
+}
 
 .panel__textbox {
   padding: var(--TEXTBOX-PADDING);
@@ -167,10 +243,10 @@ body {
 }
 
 .end__panel {
+  color: antiquewhite;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 4rem;
   height: 100vh;
-  background-color: blue;
 }
