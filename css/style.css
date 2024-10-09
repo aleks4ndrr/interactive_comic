@@ -25,7 +25,7 @@ textarea {
 
 /* locally imported font */
 @font-face {
-  font-family: AdamWarrenFont, "Bangers", sans-serif;
+  font-family: AdamWarrenFont;
   src: url("/assets/font/adam-warren-pro.regular.ttf") format("truetype");
 }
 
@@ -46,7 +46,7 @@ textarea {
 html,
 body {
   font-size: 1.2rem;
-  font-family: AdamWarrenFont, sans-serif;
+  font-family: AdamWarrenFont, "Bangers", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: rgb(30, 25, 30);
