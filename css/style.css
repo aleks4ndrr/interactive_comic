@@ -64,8 +64,6 @@ body {
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-  /* background: url(/assets/img/background.jpg);
-  background-size: repeat; */
 }
 
 .title__h1 {
