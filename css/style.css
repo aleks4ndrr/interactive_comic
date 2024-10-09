@@ -30,12 +30,15 @@ textarea {
 :root {
   /* colors */
   --BG-COLOR: #333;
+  --TEXTBOX-BG: whitesmoke;
 
   /* padding */
   --PANEL-PADDING: 4rem;
+  --TEXTBOX-PADDING: 1.5rem;
 
   /* font */
   --HEADING-FS: 5rem;
+  --TEXTBOX-FS: 1.2rem;
 }
 
 html,
@@ -113,31 +116,22 @@ body {
 /* || PANEL STYLING */
 
 .panel__odd {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
-  /* position: relative; */
-  /* top: 0; */
-  /* margin: 4rem; */
-  height: 200vh;
+  padding: var(--PANEL-PADDING);
+  height: 300vh;
   width: 100%;
   background-color: blue;
 }
 .panel__even {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
-  /* position: relative; */
-  /* top: 0; */
-  /* margin: 4rem; */
-  height: 200vh;
+  padding: var(--PANEL-PADDING);
+  height: 300vh;
   width: 100%;
   background-color: green;
 }
 
 .panel__container {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
   max-width: 100%;
   height: 100vh;
   position: sticky;
@@ -146,18 +140,25 @@ body {
 }
 
 .panel__img {
-  max-width: 80%;
+  /* max-width: 90%; */
   /* display: none; */
 }
 
 .panel__textbox {
-  position: relative;
-  bottom: 3rem;
-  left: 3rem;
+  padding: var(--TEXTBOX-PADDING);
+  font-size: var(--TEXTBOX-FS);
+  display: block;
+  background-color: var(--TEXTBOX-BG);
+  position: absolute;
+  /* left: 3rem; */
   max-width: 400px;
 }
 
 .end__panel {
-  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  height: 100vh;
   background-color: blue;
 }
